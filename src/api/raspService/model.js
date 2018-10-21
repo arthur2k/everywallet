@@ -3,6 +3,9 @@ import mongoose, { Schema } from 'mongoose'
 const raspServiceSchema = new Schema({
   estado: {
     type: String
+  },
+  color: {
+    type: String
   }
 }, {
   timestamps: true,

@@ -5,7 +5,7 @@ import { turnGPIO, index, show } from './controller'
 import { schema } from './model'
 
 const router = new Router()
-const { estado } = schema.tree
+const { estado,color } = schema.tree
 
 /**
  * @api {post} /raspservice Create rasp service
@@ -17,7 +17,7 @@ const { estado } = schema.tree
  * @apiError 404 Rasp service not found.
  */
 router.post('/',
-  body({ estado }),
+  body({ estado,color }),
   turnGPIO)
 
 /**

@@ -10,6 +10,7 @@ export const turnGPIO = ({ bodymen: { body } }, res, next) =>
     
     led.writeSync(1);
   console.log("Enciende led")
+  console.log(body)
     
   }
 export const index = ({ querymen: { query, select, cursor } }, res, next) =>
